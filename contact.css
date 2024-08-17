@@ -1,0 +1,147 @@
+
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #FAF0CA; 
+  margin:0px;
+   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥄</text></svg>") 16 0,auto; 
+}
+
+@font-face{
+  font-family: "foodlist";
+  src: url(fonts/Foodlist-Regular.ttf);
+}
+@font-face{
+  font-family: "neat";
+  src: url(fonts/Jojoba.otf);
+}
+
+.title{
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+}
+
+/* nav bar */
+a{
+  color: #0D3B66;
+  text-decoration: none;
+  padding:15px;
+  font-size:22px;
+}
+
+ul, li{
+  font-family: foodlist;
+  list-style-type: none;
+  display: inline;
+  margin-right: 5px;
+}
+
+li a:hover {
+  background-color: #EE964B;
+  transition: 0.7s;
+
+}
+
+nav{
+  display:flex;
+  justify-content:flex-end;
+  background-color: #F4D35E;
+  width:100%;
+  padding:5px;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 0em;
+}
+/* logo */
+.logo{
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  padding:2px;
+  margin-left:10px;
+}
+p{
+  font-family: neat;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  margin-top: 0.75em;
+}
+
+.contact{ /*the form */
+  height:1000x;
+  width: 600px;
+  font-family: foodlist;
+  font-size: 20px;
+  text-align: left;
+  padding:10px;
+  color: #0D3B66;
+  background-color: #EE964B;
+  box-shadow: #F95738 10px 10px 0px 3px;
+
+}
+.formbox{ /* the orange BG, encompasses form */
+  display:flex;
+  justify-content: center;
+}
+
+textarea{ /*write something */
+  height: 300px;
+  width: 400px;
+  resize:none;
+}
+
+label{
+  float:left;
+  padding:10px;
+  width:120px;
+  font-family: neat;
+} 
+.boxes{
+  padding:10px;
+  justify-content: center;
+}
+input[type=text]:focus{
+  background-color:lightgrey;
+}
+
+textarea:focus{
+  background-color:lightgrey;
+}
+
+.submitButton{
+  padding-top:8px;
+  display:flex;
+  justify-content: center;
+}
+
+.btn{
+  font-family: neat;
+  font-size:20px;
+  background-color: #0D3B66;
+  color:white;
+  border-radius: 4px;
+  padding:9px;
+}
+
+footer{
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+  background-color: #F4D35E;
+  padding: 10px;
+  margin-top: 30px;
+
+}
+
+

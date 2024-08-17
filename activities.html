@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Byte Sized</title>
+  <link href="activities.css" rel="stylesheet" type="text/css" />
+  <link type="image/png" rel="icon" href="images/22.png">
+    
+</head>
+
+<body>
+      <a class="logo" href="index.html"> <img src="images/bytesized-updated-logo.png" alt="Byte Sized Logo"></a>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Activities</h1>
+
+    <h2>Dive into our activity hub for quizzes, global playlists, and travel language tips!</h2>
+
+    <section id="quiz-section">
+        <div class="container content">
+            <div><img class="img" src="images/global-foods.png" alt="Global Foods"></div>
+            <div class="text-button">
+                <p class="text">Discover your next culinary adventure! 🍴🌍 Take our quiz to find out which country's cuisine matches your taste buds and explore delicious recommendations tailored just for you.</p>
+                <button class="quiz-button" onclick="startQuiz()">Take Quiz!</button>
+            </div>
+        </div>
+    </section>
+  
+  <div id="quiz-popup" class="quiz-popup">
+      <div class="quiz-content">
+          <span class="close-button" onclick="closeQuiz()">&times;</span>
+          <div id="quiz-container">
+
+          </div>
+      </div>
+  </div>
+  
+    <section>
+        <div class="container content">
+            <div class="text-button">
+                <p class="text">Ready to embark on a musical journey? 🎵🌏 Take our quiz to create your ultimate Global Playlist, featuring vibrant sounds and genres from every corner of the world!</p>
+                <a target="_blank" href="https://open.spotify.com/playlist/5xRHEnp8YNVPoX0kNPQo88"> <button class="playlist-button">Tune In!</button>
+                </a>
+            </div>
+            <div><img class="img" src="images/global-playlist.png" alt="Global Playlist"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container content">
+            <div><img class="img" src="images/global-languages.png" alt="Global Languages"></div>
+            <div class="text-button">
+                <p class="text">Get travel-ready with our interactive language guide! 🗣️🌍 Dive into pronunciation activities and become a master at pronouncing food names!</p>
+                <button class="language-button" onclick=" openLanguagePopup()">Learn Food Names!</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="language-popup" class="language-popup">
+        <div class="language-content">
+            <span class="close-button" onclick="closeLanguagePopup()">&times;</span>
+        <div class="lang">Learn Food Names!</div>
+            <div class="continent-row">
+                <div class="continent" onclick="pickLanguage('north-america')"><img src="images/north-america.png" alt="North America"></div>
+                <div class="continent" onclick="pickLanguage('south-america')"><img src="images/south-america.png" alt="South America"></div>
+                <div class="continent" onclick="pickLanguage('africa')"><img src="images/africa.png" alt="Africa"></div>
+            </div>
+            <div class="continent-row">
+                <div class="continent" onclick="pickLanguage('europe')"><img src="images/europe.png" alt="Europe"></div>
+                <div class="continent" onclick="pickLanguage('asia')"><img src="images/asia.png" alt="Asia"></div>
+                <div class="continent" onclick="pickLanguage('oceania')"><img src="images/oceania.png" alt="Oceania"></div>
+            </div>
+            <div id="flashcard-container" class="flashcard-container">
+            </div>
+        </div>
+    </div>
+
+    <footer>Copyright (C) Byte Sized 2024</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #FAF0CA;
+  margin: 0px;
+   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥄</text></svg>") 16 0,auto; 
+}
+
+h1{
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+  font-size: 3.5em;
+  margin-bottom:0em;
+}
+
+h2{
+  font-size: 20px;
+  font-family: neat;
+  text-align: center;
+  color: black;
+  margin-top:0.5em;
+  margin-left:2em;
+  margin-right:2em;
+  margin-bottom: 0.5em;
+}
+
+@font-face {
+  font-family: "foodlist";
+  src: url(fonts/Foodlist-Regular.ttf);
+}
+
+@font-face{
+  font-family: "neat";
+  src: url(fonts/Jojoba.otf);
+}
+
+.title {
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+}
+
+section {
+  margin-bottom: 5px; 
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin: 0em;
+  padding: 20px; 
+}
+
+.text-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-family: foodlist;
+  font-size: 30px;
+  color: #0D3B66;
+  padding: 0; /* Remove padding to reduce spacing */
+  margin: 0; /* Remove margin to reduce spacing */
+}
+
+.img {
+  max-width: 500px;
+  max-height: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-button, .playlist-button, .language-button {
+  margin-top: 20px;
+  font-family: foodlist;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #0D3B66;
+  background-color: #EE964B;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 30%;
+}
+
+.quiz-button:hover, .playlist-button:hover, .language-button:hover {
+  background-color: #F95738;
+}
+
+a{
+  color: #0D3B66;
+  text-decoration: none;
+  padding:15px;
+  font-size:22px;
+}
+
+ul, li{
+  font-family: foodlist;
+  list-style-type: none;
+  display: inline;
+  margin-right: 5px;
+}
+
+li a:hover {
+  background-color: #EE964B;
+  transition: 0.7s;
+
+}
+
+nav{
+  display:flex;
+  justify-content:flex-end;
+  background-color: #F4D35E;
+  width:100%;
+  padding:5px;
+}
+
+.logo {
+  width: 120px;
+  height: 70px;
+  object-fit: cover;
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+/* Quiz Popup styles */
+.quiz-popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quiz-content {
+  background-color: #FAF0CA;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-button {
+  color: #0D3B66;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #F95738;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#quiz-container {
+  background-color: #FAF0CA;
+  color: #0D3B66;
+  font-family: foodlist;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.quiz-question {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.quiz-options {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px; 
+}
+
+.quiz-options li {
+  margin-bottom: 10px;
+}
+
+.quiz-options input {
+  margin-right: 10px;
+}
+
+.quiz-submit-button {
+  font-family: foodlist;
+  display: block; 
+  margin: 0 auto;
+  margin: 10px;
+  background-color: #EE964B;
+  color: #0D3B66;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-submit-button:hover {
+  background-color: #F95738;
+}
+
+
+.quiz-result {
+  font-size: 26px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.language-popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.language-content {
+  background-color: #FAF0CA;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.continent-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.continent {
+  cursor: pointer;
+}
+
+.continent img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.continent img:hover {
+  transform: scale(1.1);
+}
+
+.flashcard-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.flashcard {
+  background-color: #F4D35E;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  max-width: 500px;
+}
+
+.flashcard-content {
+  font-family: foodlist;
+  font-size: 24px;
+  color: #0D3B66;
+}
+
+.arrow-button {
+  background-color: #EE964B;
+  color: #0D3B66;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.arrow-button:hover {
+  background-color: #F95738;
+}
+
+.close-button {
+  color: #0D3B66;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #F95738;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lang{
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+  font-size: 30px;
+  padding: 10px;
+}
+
+footer{
+  font-family: foodlist;
+  text-align: center;
+  color: #0D3B66;
+  background-color: #F4D35E;
+  padding: 10px;
+}
